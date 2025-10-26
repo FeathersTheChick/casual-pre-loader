@@ -461,12 +461,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../howwork/" class="md-nav__link">
+      <a href="../how_it_works/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    How does this work?
+    How It Works
     
   </span>
   
@@ -603,27 +603,41 @@
 </ol>
 <h3 id="step-2-adding-your-mods">Step 2: Adding your mods<a class="headerlink" href="#step-2-adding-your-mods" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Prepare your mods. The preloader can handle all mods, even mods that aren't <em>'casual compatible',</em> so don't be afraid to use whatever you'd like! Once you have all the mods you want, set them aside.</strong> <em>While you can put your hud in the preloader, it does the exact same thing as putting it in custom, so you don't have to if you don't want to.</em></li>
-<li><strong>Open the preloader by running <code>RUNME.bat</code>, and follow the first-time set-up instructions that pop up.</strong> <em>The 'import' tab can be ignored unless you're updating from a super old version of the preloader, or decided not to let the auto-updater update your preloader.</em></li>
+<li><strong>Prepare your mods. The preloader can handle all mods, even mods that aren't <em>'casual compatible',</em> so don't be afraid to use whatever you'd like! Once you have all the mods you want, set them aside.</strong> <ul>
+<li>While you <em>can</em> put your hud in the preloader, it does the exact same thing as putting it in custom, so you don't have to if you don't want to.</li>
+<li>Certain mods are either broken or outdated. I cannot guarantee that absolutely everything will work.</li>
+</ul>
+</li>
+<li><strong>Open the preloader by running <code>RUNME.bat</code>, and follow the first-time set-up instructions that pop up.</strong> <ul>
+<li>The '<em>import</em>' tab can be ignored unless you're updating from a super old version of the preloader, or decided not to let the auto-updater update your preloader.</li>
+</ul>
+</li>
 <li><strong>Once the preloader is open, drag and drop your mods anywhere over the window to import them.</strong></li>
 </ol>
 <h3 id="step-3-configuring-your-mods">Step 3: Configuring your mods<a class="headerlink" href="#step-3-configuring-your-mods" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p><strong>The first tab of the preloader is for your particles, on this tab you can mix and match your different particle packs for whatever look you're going for.</strong> <em>If you want even more in-depth customization, instead of the general groups we put the particles into, navigate to the top left of your window, and un-check 'simple particle mode'.</em></p>
+<p><strong>The first tab of the preloader is for your particles, on this tab you can mix and match your different particle packs for whatever look you're going for.</strong> </p>
+<ul>
+<li>If you want even more in-depth customization, instead of the general groups we put the particles into, navigate to the top left of your window, and un-check '<em>simple particle mode</em>'.</li>
+</ul>
 </li>
 <li>
-<p><strong>The second tab of the preloader is everything else, including your models, animations, huds, skins, skyboxes, etc. You first check all the mods you want to use on the left by clicking on the check box next to them, then change the load order on the right by clicking and dragging.</strong> <em>If you have an animation pack, and any model mod, make sure to load your animation pack last!</em></p>
-<blockquote>
-<p>NOTE: Some mods you install may have the same files included. The preloader warns you of this with this caution symbol.
-For mods like this, make sure the one you want to see <strong>more</strong> of is <strong>HIGHER</strong> in your load order <em>(bigger number)</em>. You can also hover over the caution symbol to see how many files are the same <em>(like a minecraft texture pack!)</em>.</p>
-</blockquote>
+<p><strong>The second tab of the preloader is everything else, including your models, animations, huds, skins, skyboxes, etc. You first check all the mods you want to use on the left by clicking on the check box next to them, then change the load order on the right by clicking and dragging.</strong></p>
+<ul>
+<li>If you have an animation pack, and any model mod, make sure to load your animation pack last!</li>
+</ul>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some mods you install may contain the same files. When this happens, the preloader displays a caution symbol to warn you about conflicts. To resolve this, place the mod you want to see <strong>HIGHER</strong> in your load order <em>(bigger number)</em> so it takes priority. You can hover over the caution symbol to see how many files overlap <em>(just like Minecraft texture packs!)</em>.</p>
+</div>
 <h3 id="step-4-installing-your-mods-to-tf2">Step 4: Installing your mods to TF2<a class="headerlink" href="#step-4-installing-your-mods-to-tf2" title="Permanent link">&para;</a></h3>
 <ol>
-<li>
-<p><strong>Don't forget to add <code>+exec w/config.cfg</code> to your launch options!</strong> <em>You can do this by going onto the page for your game in steam. Then, you go to settings, down to properties, then paste the command in your launch options!</em></p>
+<li><strong>Don't forget to add <code>+exec w/config.cfg</code> to your launch options!</strong> <ul>
+<li>You can do this by going onto the page for your game in Steam. Then, you go to settings, down to properties, then paste the command in your launch options!</li>
+</ul>
 </li>
 <li>
 <p><strong>Click install on the bottom right!</strong></p>
@@ -633,29 +647,46 @@ For mods like this, make sure the one you want to see <strong>more</strong> of i
 </li>
 </ol>
 <h2 id="linux-tutorial">Linux Tutorial:<a class="headerlink" href="#linux-tutorial" title="Permanent link">&para;</a></h2>
-<p><strong>ples fix  and format dis for me im not familiar with the steps needed for the linux version, or just send me the general steps on discord and ill rewrite and format :D</strong>
--Fethars the chick</p>
-<p>We need studiomdl.exe from the Windows version of TF2.</p>
-<p>First, force the use of proton in game properties, make sure to click "update" after.</p>
+<ol>
+<li>We need studiomdl.exe from the Windows version of TF2. First, force the use of proton in game properties, make sure to click "update" after.</li>
+</ol>
 <p><img alt="proton" src="../images/proton.png" /></p>
-<p>Once updated, navigate to your <code>Steam/steamapps/common/Team Fortress 2/</code> and rename bin/ to something other than bin/, for example, bin_/.</p>
+<ol>
+<li>Once updated, navigate to your <code>Steam/steamapps/common/Team Fortress 2/</code> and rename bin/ to something other than bin/, for example, bin_/.</li>
+</ol>
 <p><img alt="bin" src="../images/bin.png" /></p>
-<p>Disable proton in game properties, and update again.</p>
+<ol>
+<li>Disable proton in game properties, and update again.</li>
+</ol>
 <p><img alt="disable proton" src="../images/disable_proton.png" /></p>
-<p>Back in <code>Steam/steamapps/common/Team Fortress 2/</code>, rename bin_/ back to bin/ to merge the directories, or copy its contents into bin/.</p>
+<ol>
+<li>Back in <code>Steam/steamapps/common/Team Fortress 2/</code>, rename <code>bin_/</code> back to <code>bin/</code> to merge the directories, or copy its contents into <code>bin/</code>.</li>
+</ol>
 <p><img alt="bin merge" src="../images/bin_merge.png" /></p>
-<p>If done right, you should now see <code>studiomdl.exe</code> inside the bin/ folder!</p>
+<ol>
+<li>If done right, you should now see <code>studiomdl.exe</code> inside the <code>bin/</code> folder!</li>
+</ol>
 <p><img alt="studiomdl" src="../images/studiomdl.png" /></p>
+<ol>
+<li>
 <p>Now you can clone the repo, or install it as an <a href="https://aur.archlinux.org/packages/casual-pre-loader-git">AUR package</a>!</p>
+</li>
+<li>
 <p>Using <a href="https://github.com/Jguer/yay">yay</a>:</p>
+</li>
+</ol>
 <pre><code class="language-sh">yay -S casual-pre-loader-git
 casual-pre-loader
 </code></pre>
-<p>Using <a href="https://github.com/Morganamilo/paru">paru</a>:</p>
-<pre><code class="language-sg">paru -S casual-pre-loader-git
+<ul>
+<li>Using <a href="https://github.com/Morganamilo/paru">paru</a>:</li>
+</ul>
+<pre><code class="language-sh">paru -S casual-pre-loader-git
 casual-pre-loader
 </code></pre>
-<p>Or with git:</p>
+<ul>
+<li>Or with git:</li>
+</ul>
 <pre><code class="language-sh">git clone https://github.com/cueki/casual-pre-loader
 cd casual-pre-loader
 python -m venv .venv

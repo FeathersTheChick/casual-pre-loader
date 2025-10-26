@@ -1,0 +1,1070 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="fethas & djsigmann">
+      
+      
+        <link rel="canonical" href="https://feathersthechick.github.io/casual-pre-loader/how_it_works/">
+      
+      
+        <link rel="prev" href="../troubleshooting/">
+      
+      
+      
+      <link rel="icon" href="../images/cueki_icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>How It Works - Casual-Pre-loader</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-it-works" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Casual-Pre-loader" class="md-header__button md-logo" aria-label="Casual-Pre-loader" data-md-component="logo">
+      
+  <img src="../images/cueki_icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Casual-Pre-loader
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How It Works
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FeathersTheChick/casual-pre-loader" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Casual-Pre-loader" class="md-nav__button md-logo" aria-label="Casual-Pre-loader" data-md-component="logo">
+      
+  <img src="../images/cueki_icon.png" alt="logo">
+
+    </a>
+    Casual-Pre-loader
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FeathersTheChick/casual-pre-loader" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    How It Works
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    How It Works
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mannifesto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mannifesto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mannifesto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Foundation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sv_pure" class="md-nav__link">
+    <span class="md-ellipsis">
+      sv_pure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-failure-of-sv_pure" class="md-nav__link">
+    <span class="md-ellipsis">
+      The failure of sv_pure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bypassing-sv_pure-the-easy-way" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bypassing sv_pure, the easy way
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-hard-way" class="md-nav__link">
+    <span class="md-ellipsis">
+      The hard way
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gameinfotxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gameinfo.txt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#md5" class="md-nav__link">
+    <span class="md-ellipsis">
+      MD5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baby-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Baby Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-particle-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Particle Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcf-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCF Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-dependency-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Dependency Chaining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vgui-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      VGUI Caching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soundscripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soundscripts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thank-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thank You!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closing-remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closing Remarks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mannifesto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mannifesto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mannifesto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Foundation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sv_pure" class="md-nav__link">
+    <span class="md-ellipsis">
+      sv_pure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-failure-of-sv_pure" class="md-nav__link">
+    <span class="md-ellipsis">
+      The failure of sv_pure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bypassing-sv_pure-the-easy-way" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bypassing sv_pure, the easy way
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-hard-way" class="md-nav__link">
+    <span class="md-ellipsis">
+      The hard way
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gameinfotxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gameinfo.txt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#md5" class="md-nav__link">
+    <span class="md-ellipsis">
+      MD5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baby-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Baby Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-particle-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Particle Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcf-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCF Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-dependency-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Dependency Chaining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vgui-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      VGUI Caching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soundscripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soundscripts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thank-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thank You!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closing-remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closing Remarks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h1>
+<p><em>What follows chronicles my perspective during the development of the preloader. If you wish to contact me, or anyone else who has worked on this, join the </em><em><a href="https://discord.gg/64sNFhqUaB">discord</a></em><em>. — cueki</em></p>
+<h2 id="mannifesto">Mannifesto<a class="headerlink" href="#mannifesto" title="Permanent link">&para;</a></h2>
+<h3 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h3>
+<p>In 2024, I was banned from RGL for abusing exploits I didn't fully understand. This document explains the technical details of what I built afterward, not as justification, but as documentation.</p>
+<h3 id="understanding-the-foundation">Understanding the Foundation<a class="headerlink" href="#understanding-the-foundation" title="Permanent link">&para;</a></h3>
+<p>I want this explanation to be approachable for a general audience, doing my best to keep technical terminology to a minimum. Some things, however, are unavoidably complicated. Thus, I will begin by explaining one fundamental concept.</p>
+<p>When the Source engine was being developed, Valve's engineers had a performance problem to solve. Hard drives were slow - painfully slow compared to the SSDs of today. Reading data from disk every time you needed it would obliterate load times and kill performance. Their solution was to implement an aggressive caching system that 'holds on' to assets in memory that are likely to be used again soon.</p>
+<p>As an example, TF2 has 9 classes that can exist on any map. Each class can shoot, move, reload, take damage, etc. Actions such as these are constantly called by the engine. It makes sense to load them once at game start and keep them in memory. This way, when you change maps, change classes, or switch weapons, the game doesn't have to wait for the hard drive to give it the same data repeatedly. The same logic applies to common map elements like health packs, control points, and frequently used textures; they often persist across several map changes to avoid redundant disk operations.</p>
+<p>This caching system is the reason why we've always been able to 'preload' certain things. First-person animations are a primary example. They're called often and randomly by users, so all possible instances stay loaded in memory.</p>
+<h3 id="sv_pure">sv_pure<a class="headerlink" href="#sv_pure" title="Permanent link">&para;</a></h3>
+<p>To understand sv_pure, one must understand the origin of these games. Team Fortress, Counter-Strike, and Dota started as community mods - game rule modifications with custom assets slapped on top of existing engines. They relied entirely on engine extensibility to load custom content. The Source engine inherited this design, which means these games rely on engine code that's just fine with loading user-provided files.</p>
+<p>This creates a problem: what if you want to limit what users can customize? One would need a system that can load their own content, but not the content of another,  while simultaneously allowing server operators to set rules as they see fit. Valve's solution was the sv_pure server whitelist. How it works is pretty simple: when a client connects to your server, it receives a list of ‘valid’ paths for customization that you have defined in a text file. The client then reads this list of valid paths and checks it against what it currently has loaded in memory. If it sees any invalid paths, it forces a reload on that file, reverting to what the game has set as its ‘default’.</p>
+<pre><code>whitelist
+{
+    // Allow custom player models.
+    models\player\...           any
+    materials\models\player\... any
+
+    // Allow custom spray decals.
+    materials\temp\...          any
+    materials\vgui\logos\...    any
+    materials\vgui\logos\ui\... any
+
+    // Allow &quot;mymod&quot; resources to come from disk.
+    materials\mymod\... any
+    models\mymod\...    any
+    sound\mymod\...     any
+}
+</code></pre>
+<p>In theory, this system works pretty well. You have some code running on the client that should be unmodifiable (VAC protected - we’ll come back to that later), and as long as the default fallback files are protected by some sort of signature, which the client verifies (also VAC protected), then you should be good to go! Yet, here we are.</p>
+<h3 id="the-failure-of-sv_pure">The failure of sv_pure<a class="headerlink" href="#the-failure-of-sv_pure" title="Permanent link">&para;</a></h3>
+<p>By the very nature of the engine, this system is fragile. The game is hinging the entirety of asset loading on a single check. The game is also trusting the client to obediently unload its assets. The game is assuming you didn't have any oversights during implementation. The game is also assuming that the hash is properly checked during instantiation. This is a difficult problem with a band-aid fix. I don't fault a single developer at Valve for this. I couldn't have come up with a better solution myself (especially not in 2004). </p>
+<p>But don't take my word for it, here are some comments by Valve:</p>
+<p><img alt="hacker!" src="../images/sv_pure_1.png" />
+<img alt="Trust me bro" src="../images/sv_pure_2.png" />
+<img alt="&quot;he&quot;" src="../images/sv_pure_3.png" /></p>
+<h3 id="bypassing-sv_pure-the-easy-way">Bypassing sv_pure, the easy way<a class="headerlink" href="#bypassing-sv_pure-the-easy-way" title="Permanent link">&para;</a></h3>
+<p>The simplest method is to hook CPureServerWhitelist. This disables the whitelist check with minimal effort. When done at the driver level, it's essentially undetectable.</p>
+<p>This is boring, and guaranteed to work with no discoveries left. It's also cheating, and feels icky.</p>
+<h3 id="the-hard-way">The hard way<a class="headerlink" href="#the-hard-way" title="Permanent link">&para;</a></h3>
+<p>As it stands, the preloader uses a combined total of five sv_pure bypasses to completely disable it. In order of importance: the gameinfo.txt exploit, the unchecked VPK md5 hash, VGUI material persistence, model dependency chaining, and nested directory exclusion. I will expand on each of these as we get to them. There are other unused exploits that are known. All of these exploits rely on each other in some form or fashion and require ‘preloading’ into an offline map prior to joining online matches. As such, there is no risk of a VAC ban, only a risk of Valve patching these exploits.</p>
+<h3 id="gameinfotxt">Gameinfo.txt<a class="headerlink" href="#gameinfotxt" title="Permanent link">&para;</a></h3>
+<p>Basically, changing one line in tf/gameinfo.txt disables large portions of the multiplayer sv_pure check, but not all. Off the top of my head, I believe it allows for custom materials, custom models (not map props), custom animations, as well as a few VGUI elements and lightwarps. This exploit has been around for some time. I remember reading a reddit thread back in ~2021 talking about its use in CS:GO, referencing the <a href="https://github.com/kkthxbye-code/csgo_bugs/tree/master">CS:GO bugs repository</a>. As I hadn't played tf2 in over a year at that point, I didn't think much about it, or even attempt to make a connection.</p>
+<h3 id="md5">MD5<a class="headerlink" href="#md5" title="Permanent link">&para;</a></h3>
+<p>The md5 hash being unchecked was something I mostly figured out on my own. <a href="https://github.com/ValveSoftware/Source-1-Games/issues/887">The knowledge was out there</a>, but my only clue was <a href="https://www.youtube.com/watch?v=67LPSFtVlsk">this</a> shounic video, in which he deletes VPK files in tf/ to see if the game was still playable. This might seem innocuous, but from the perspective of a developer, this is a huge red flag; the game is not properly verifying files on launch. So, I started poking at it. I learned that when TF2 loads a VPK archive, it reads from a 'directory file'. This directory contains three pieces of information: the file's size, its MD5 hash (a cryptographic fingerprint used to verify the file hasn't been tampered with), and its location within the archive. See my <a href="#vpk-structure">example</a> of a VPK for more info.</p>
+<p>Early on, I was blindly patching bytes within random files based on string lookups. My assumption was that this hash check was causing corruption. I didn't understand it at the time, but I was simply invalidating pointers in the directory header.</p>
+<p>And that was that, for a while.</p>
+<h3 id="baby-steps">Baby Steps<a class="headerlink" href="#baby-steps" title="Permanent link">&para;</a></h3>
+<p>After a year's hiatus, I decided to spend more time playing TF2 again. During this time, some friends inquired about decreasing the visual clutter of the pyro's flames. With my rough understanding of VPK editing and the untapped potential of the gameinfo.txt exploit, I got to work. With all that, the best I could get was:</p>
+<pre><code class="language-vmt">Spritecard
+{
+    &quot;srgb?$overbrightfactor&quot; &quot;5&quot;
+    &quot;$basetexture&quot; &quot;particle\flameThrowerFire\flamethrowerfire102&quot;
+    &quot;$translucent&quot; &quot;1&quot;
+    &quot;$addself&quot; &quot;0.5&quot;
+    &quot;$DEPTHBLEND&quot; &quot;1&quot;
+    &quot;$DEPTHBLENDSCALE&quot; &quot;100&quot;
+    &quot;$startfadesize&quot; &quot;.3&quot;
+    &quot;$endfadesize&quot; &quot;.5&quot;
+    &quot;$maxsize&quot; &quot;.4&quot; // change this to something like 0.05
+    &lt;dx90
+    {
+        &quot;$maxsize&quot; &quot;.15&quot; // this too
+    }
+}
+</code></pre>
+<p><img alt="Reduced flame visual clutter" src="../images/flame_example.png" /></p>
+<p>Great! But underwhelming. They were happy with it. I wasn't. So, I did what anyone would do in my position. I sat down, and read documentation. There is not that much documentation on the particle system. The <a href="https://developer.valvesoftware.com/wiki/PCF">wiki page</a> was complete enough for me to cobble together some basic understanding, and through this, some basic modifications. As I was now aware of the VPK header corruption, I knew that I couldn't modify the particle effects much. Thus, I started with some simple stuff, like colours. I even wrote some custom code to swap all the colours by a relative amount, essentially making a 'hue shifter' for particles.</p>
+<p><img alt="Particle color shifting example" src="../images/color_example.jpg" /></p>
+<p>Then I had an idea: what if I take a custom particle file, and patch over what it's meant to be replacing in game?</p>
+<h3 id="custom-particle-integration">Custom Particle Integration<a class="headerlink" href="#custom-particle-integration" title="Permanent link">&para;</a></h3>
+<p>This presents three obvious issues and one genuinely frustrating problem.</p>
+<ol>
+<li>What if the file is smaller than what is in the game?</li>
+<li>What if the file is missing something that is expected to be in the game?</li>
+<li>What if the file is larger than what is expected in the game?</li>
+<li>What if the particle system's load order behavior leads modders to organize files in a way that makes my life harder?</li>
+</ol>
+<p>Since whatever loads last takes priority, modders naturally dump all their particles into single files instead of maintaining dozens of separate ones.  It's the easiest choice given how the system works.</p>
+<p>Keep in mind, whenever you want to look at a particle file, your only real option is to load into some archaic particle editor that may or may not function after the 64bit update, or to look at it raw via an external tool, like VPKEdit:</p>
+<p><img alt="VPKEdit displaying raw particle file data" src="../images/vpkedit_particle.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Side note</p>
+<p>I want to give a massive shoutout to the <a href="https://github.com/craftablescience/VPKEdit">VPKEdit project</a>. Without this software, I would have never made it this far. The people behind it are really cool and really smart, you should definitely go and show some love, support their work, star their repositories, etc. They deserve it.</p>
+</div>
+<p>At the time, I knew I wouldn't make it very far if I didn't fully understand what I was working with. None of those problems would have realistic solutions if I couldn't precisely read and write this file type. So, the next step was to write a parser. What kind of parser? Two kinds: one for <a href="https://github.com/cueki/valve-parsers?tab=readme-ov-file#pcf-files">PCF files</a>, and one for <a href="https://github.com/cueki/valve-parsers?tab=readme-ov-file#quick-start-parsing--modification">VPK files</a>. This took quite some time, reading and writing binary data is not the easiest thing one can do. You can make subtle mistakes that don't reveal themselves for months. </p>
+<p>To give a brief overview on how particle files are structured, you have a file 'particle.pcf' which contains a header to tell the game what version it is, a string dictionary to map specific numbers to specific words, an element dictionary to map specific numbers to specific elements, and then the element data itself. </p>
+<p>So, a very tiny particle file might look like:</p>
+<pre><code>PCF File: tiny.pcf
+Version: DMX_BINARY2_PCF1
+Strings: 5 | Elements: 2
+
+STRING DICTIONARY:
+
+0. DmeElement
+1. particleSystemDefinitions
+2. DmeParticleSystemDefinition
+3. radius
+4. color
+
+ELEMENTS:
+
+[0] root
+    Type: 0 [DmeElement]
+    Name: &quot;root&quot;
+    Attributes (1):
+      - 1: [particleSystemDefinitions] → references element 1 [my_particle]
+
+[1] my_particle
+    Type: 2 (DmeParticleSystemDefinition)
+    Name: &quot;my_particle&quot;
+    Attributes (2):
+      - 3: 5.0 [radius]
+      - 4: RGBA(255, 255, 255, 255) [color]
+
+And so on...
+</code></pre>
+<p><a id="vpk-structure"></a>VPK files also use a tree structure, but for organizing file paths rather than element relationships. Here's an example using the mastercomfig flat-mouse addon:</p>
+<pre><code>VPK File: mastercomfig-flat-mouse-addon.vpk (224 bytes)
+
+HEADER:
+
+Signature:   0x55AA1234
+Version:     2
+Header Size: 28 bytes (always)
+Tree Size:   47 bytes
+Data Size:   149 bytes
+
+DIRECTORY TREE:
+
+Files organized as: extension -&gt; path -&gt; filename
+
+Extension: &quot;cfg&quot;
+    Path: &quot;cfg/addons&quot;
+        Filename: &quot;flat-mouse&quot;
+        CRC: 0xB497242C
+        Archive Index: 0x7FFF (not a multi-part vpk)
+        Offset: 0 (relative to tree)
+        Length: 149 bytes (size)
+
+
+EMBEDDED DATA (149 bytes at offset 75)
+
+File: cfg/addons/flat-mouse.cfg
+m_customaccel 0
+m_filter 0
+m_mousespeed 0
+m_mouseaccel1 0
+m_mouseaccel2 0
+m_rawinput 1
+zoom_sensitivity_ratio .793471
+echo&quot;Flat Mouse addon applied&quot;
+</code></pre>
+<p>I don't know if it's worth concerning yourself with the intricacies of data structures, but these represent the boundaries I must exist within. The VPK must be valid and the PCF inside of the VPK must also be valid. </p>
+<p>So, let's start by tackling problem 1: what do we do if the files are smaller than what's in the VPK? Easy. As the VPK is reading in chunks based on the data size context, we can pad out remaining data with junk. All we need to do is find the difference in size between what's in the VPK and what we have as our file. We can then take that value and add <code>n*0x20</code> to guarantee the file size matches what is inside of the VPK.</p>
+<p>On to problem 2. We know that the game loads particle files in a specific order. This order can be used to overwrite particles currently in the game. If we find an unused particle file that is loaded later, or a particle file that has some wasted space, we can use it to 'inject' elements that take priority. This is an interesting idea, but not super helpful unless we can figure out a way to deterministically find these instances of wasted space. It still doesn't help us, however, due to problem 3.</p>
+<p>The 3rd problem is a pretty important one. We will always be restricted by size. This stumped me for about 2 months, but something in my gut told me to keep going. I know this game. I know how broken Source spaghetti can be. I knew there had to be something I was missing.</p>
+<p>I was right.</p>
+<h3 id="pcf-optimization">PCF Optimization<a class="headerlink" href="#pcf-optimization" title="Permanent link">&para;</a></h3>
+<p>As it turns out, particle files are <em>extremely inefficient</em> in their design. Each particle file isn't actually a 'file'. The game flattens the whole particle directory as one big list of elements. It stores the references to the elements themselves, but not the particle files that contain them. This is why elements loaded later take priority. Each element is also designed to be readable completely on its own, if you were to rip out the explosion particle effect and put it into its own <code>custom_explosion.pcf</code>, it would have all the data required to render itself. This means that if <code>element1</code> and <code>element2</code> of <code>custom_explosion.pcf</code> only have a small change between them, there's a bunch of sub-referenced data that is duplicated and scattered across the file.</p>
+<p>As shown in the example, everything is index referenced. So, if we <a href="https://github.com/cueki/casual-pre-loader/blob/main/operations/pcf_compress.py#L38-L55">update the references</a> to use the same index for duplicated data, we can then discard all other instances of duplicate data. This solves problem 2. I can do better. Valve chose to keep a lot of default parameters set within the particle files, these <a href="https://github.com/cueki/casual-pre-loader/blob/main/operations/pcf_compress.py#L132-L150">can be removed</a> with no issue for even more space. And if that's not enough, they also waste space with <a href="https://github.com/cueki/casual-pre-loader/blob/main/operations/pcf_compress.py#L108-L129">unused strings</a> that can be blanked out with no downside. If you go through the effort to optimize the particle files in this way, you will see on average a 3-4x size improvement. This improvement is proportional to the file size, larger files with more elements will have more opportunities for deduplication.</p>
+<p>Now that I've solved problem 3, what does this mean exactly? In the beginning, I used this extra space to squish every single particle element into a few large files, like <code>halloween.pcf</code> or <code>items_fx.pcf</code>. This is wildly inefficient but it worked well enough. One issue is that if effects are loaded later, they will be overwritten by the defaults. Also, if you wanted to mix and match certain particle effects, it just wasn't possible. An option was to update the <code>particle_manifest.txt</code> to circumvent some of these issues, but this lacked specific particle selection. I still felt I had something worth sharing. Welcome to v1.0.0 of the preloader. </p>
+<p>Problem 4, however, remained unsolved. Certain mod makers would package all of their particle effects into a singular file like <code>npc_fx.pcf</code>. Trying to put all of that into any one particle file while simultaneously fitting it into the game wasn't feasible. From here the solution seems obvious, right? All we have to do is create a <a href="https://github.com/cueki/casual-pre-loader/blob/main/particle_system_map.json">mapping</a> that matches the entire particle system of the game, <a href="https://github.com/cueki/casual-pre-loader/blob/main/operations/pcf_rebuild.py#L13-L32">walk the tree</a> of every element, find which elements are defined in what file, use that tree to then do a <a href="https://github.com/cueki/casual-pre-loader/blob/main/operations/pcf_rebuild.py#L53-L59">reverse lookup</a> on each element in a mod, then <a href="https://github.com/cueki/casual-pre-loader/blob/main/operations/advanced_particle_merger.py">Frankenstein elements</a> of the base game and the mod to reconstruct each particle file dynamically. Next, with each individual particle file now representing what the game would expect, we can compress and shove them into the game with padding. </p>
+<p>This took me another month or two to iron out. There are problems that require manual fixing. Some custom elements just never fit due to the nature of their base PCF files being so small. There are also <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3453232654">errors by Valve</a>, as well as some really strange behaviors from mod makers having dereferenced elements. On top of that, certain elements break the game's own rules and need to be statically defined in order to be properly linked.</p>
+<p>Also, I had to get all of this in front of an end user and not have their head explode.</p>
+<p>Let's recap. At this point we have the ability to load some custom materials via preloading with the gameinfo exploit, as well as animations, models, lightwarps, and now particles via direct VPK modification. What we couldn't load yet were skyboxes, props (which would start to throw caching errors), sounds, and decals. I also had no idea if anything further was realistic. I knew that directly modifying the VPKs would always be a solution, but there was no guarantee I would find a way to compress the data like I did with particle files.</p>
+<h3 id="model-dependency-chaining">Model Dependency Chaining<a class="headerlink" href="#model-dependency-chaining" title="Permanent link">&para;</a></h3>
+<p>The most impactful issue facing the app was model unloading. This was because the other two methods of preloading did not have this error. </p>
+<p><img alt="Broken Model Loading" src="../images/broken_model.png" /></p>
+<p>If my goal was to provide an 'all-in-one' solution, this had to be resolved. I was also unfamiliar with the way models worked, and did not feel like reverse engineering another data structure <a href="https://github.com/craftablescience/sourcepp/pull/85"><em>yet</em></a>. I knew that my method worked <em>sometimes</em> for <em>some reason</em>, so I got to work narrowing down the issue. A quick bandaid fix I discovered shortly thereafter was to use the <a href="https://github.com/Lucifixion/QuickPrecache">'quickprecache'</a> method developed by goopswagger. Since there was an open invitation to port the code from java to anything else, I took it upon myself to do so in python and then expose the library to the preloader. Get ready for more examples.</p>
+<p>Let's say you have these mods installed:</p>
+<pre><code>/tf/custom/
+├── cool_maps_mod/
+│   └── models/
+│       ├── props/model1.mdl
+│       └── props/model2.mdl
+└── extra_gameplay_items/
+    └── materials/
+        └── items/material.vmt
+</code></pre>
+<p>QuickPrecache scans and finds:</p>
+<pre><code>props/model1.mdl
+props/model2.mdl
+</code></pre>
+<p>It creates a file called precache_0.qc and compiles it with studiomdl:</p>
+<pre><code>// precache_0.qc
+    $modelname &quot;precache_0.mdl&quot;
+    $includemodel &quot;props/model1.mdl&quot;
+    $includemodel &quot;props/model2.mdl&quot;
+</code></pre>
+<p>Then it creates precache.qc and also compiles it with studiomdl:</p>
+<pre><code>// precache.qc
+    $modelname &quot;precache.mdl&quot;
+    $includemodel &quot;precache_0.mdl&quot;
+</code></pre>
+<p>Contained within the _QuickPreCache.vpk is an already compiled competitive_badge.mdl that contains:</p>
+<pre><code>// competitive_badge.mdl
+    $includemodel &quot;precache.mdl&quot;
+</code></pre>
+<p>Which creates a dependency chain:</p>
+<pre><code>competitive_badge.mdl (in _QuickPrecache.vpk)
+    - $includemodel precache.mdl (in /tf/models/)
+        - $includemodel precache_0.mdl (in /tf/models/)
+            - $includemodel
+            ├── props/model1.mdl (in /tf/custom/cool_maps_mod/)
+            └── props/model2.mdl (in /tf/custom/cool_maps_mod/)
+</code></pre>
+<p>The competitive badge never gets unloaded because it exists on the scoreboard. Therefore, the models that become linked in this manner also never unload. This has some strange effects on the game. For reasons I do not fully understand, if custom playermodels are linked in this manner, the lighting sometimes breaks, resulting in completely black cosmetics. However, with further investigation, I deduced that quickprecache was not necessary for most models, and only useful for map props. With a bit of help from community testing, we narrowed it down to a <a href="https://github.com/cueki/casual-pre-loader/blob/main/core/constants.py#L159-L167">filter</a> that will activate quickprecache when necessary if certain types of models exist.</p>
+<h3 id="decals">Decals<a class="headerlink" href="#decals" title="Permanent link">&para;</a></h3>
+<p>The next thing I thought to tackle was decals. I underestimated just how annoying their implementation was in the engine. Decals use a material shader called a <a href="https://developer.valvesoftware.com/wiki/Subrect">‘subrect’</a> so that they can be rendered both on the world and on models. There are some weird rules about this, in order to modulate the decal to feign depth, they use the difference between the texture the decal is being applied to and the grey scale (RGB 127, 127, 127). The <a href="https://developer.valvesoftware.com/wiki/Decals#DecalModulate">wiki</a> explains this better than I can. Decals also use a sprite sheet, mod2x, which allocates small squares (think 128x128) for each texture. This means that if the mod maker created their own textures, and kept them as individual files at a higher resolution, I would need to simultaneously convert them to this awkward grey scale alpha channel, as well as compress them into lower-quality versions. The reason this remains unfinished to this day is because doing it all automatically looks terrible. </p>
+<h3 id="vgui-caching">VGUI Caching<a class="headerlink" href="#vgui-caching" title="Permanent link">&para;</a></h3>
+<p>Decals were not all in vain, as when attempting different methods of getting the game to accept larger textures, I started tinkering with another method that opened the door for further caching. Thankfully this ‘VGUI preloading’ is not nearly as complicated. Similar to how quickprecache creates a dependency chain for models, by loading textures in the HUD (offscreen), they will persist between map changes. I wrote a standalone script to generate the .res file structure given a set of input files. First thing I got working was <a href="https://github.com/cueki/casual-pre-loader/blob/main/core/handlers/skybox_handler.py">skyboxes</a> (which still required me directly patching the VPK with skybox VMTs) but once I had that figured out, akuji came up with the idea of loading warpaints in the same way. This involved locating every single warpaint path in the game, and the result was a 50,000 line long <a href="https://github.com/cueki/casual-pre-loader/blob/main/backup/resource/ui/vguipreload.res">vguipreload.res</a> file. These textures are not actively rendered, but their reference stays in memory, and that's what matters.</p>
+<h3 id="soundscripts">Soundscripts<a class="headerlink" href="#soundscripts" title="Permanent link">&para;</a></h3>
+<p>This leaves sounds as the last thing to be modifiable, but at this point, the burnout was starting to get to me. I first heard of the soundscripts method via the <a href="https://www.teamfortress.tv/51593/cheating-to-hear-spies-is-painfully-easy">tf.tv</a> post by pete, but the idea of adding it to the preloader felt demotivating because all the discovery had already been done. Alas, akuji came to me after some testing to verify that the bypass was as simple as putting the sound files in <code>misc/</code>, and then <a href="https://github.com/cueki/casual-pre-loader/blob/main/core/handlers/sound_handler.py#L119-L175">updating the sound scripts</a> to reflect the new location. </p>
+<h3 id="thank-you">Thank You!<a class="headerlink" href="#thank-you" title="Permanent link">&para;</a></h3>
+<p>I would like to thank some notable individuals in this process.</p>
+<p><a href="https://gamebanana.com/members/1664112">pliso</a> and <a href="https://gamebanana.com/members/1672887">goopswagger</a>, for starting the TF2 modding renaissance in 2023 via their preload methods.</p>
+<p>The various mod makers whose passion breathes new life into this 18 year old game.</p>
+<p>My discord community for helping me test and debug each iteration of this process.</p>
+<p>djsigmann, feathers, akuji, and astrid for helping me write and edit this document.</p>
+<p>And finally,</p>
+<p><a href="https://github.com/Yttrium-tYcLief/">yttrium</a>. I don't know if you will ever read this, but you laid the groundwork that made everything else possible. I know you may have some reservations about what this enables, but I encourage you to look a little closer at my code. I did the best I could given my limitations.</p>
+<h3 id="closing-remarks">Closing Remarks<a class="headerlink" href="#closing-remarks" title="Permanent link">&para;</a></h3>
+<p>Seven years ago, I asked a question about how to do what this application does. I didn't know the answer then. I barely understood the question. But I stayed curious, and curiosity turned into understanding. Whatever you're working on, whatever seems impossible, keep going, I believe in you.</p>
+<p><img alt="A Simple Question" src="../images/a_simple_question.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

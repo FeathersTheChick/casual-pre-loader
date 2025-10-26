@@ -16,7 +16,7 @@
         <link rel="prev" href="../faq/">
       
       
-        <link rel="next" href="../howwork/">
+        <link rel="next" href="../how_it_works/">
       
       
       <link rel="icon" href="../images/cueki_icon.png">
@@ -413,7 +413,7 @@
         <li class="md-nav__item">
   <a href="#i-got-a-vac-error-i-dont-wanna-get-banned" class="md-nav__link">
     <span class="md-ellipsis">
-      I got a VAC error! I dont wanna get banned!
+      I got a VAC error! I don't wanna get banned!
     </span>
   </a>
   
@@ -467,12 +467,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../howwork/" class="md-nav__link">
+      <a href="../how_it_works/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    How does this work?
+    How It Works
     
   </span>
   
@@ -544,7 +544,7 @@
         <li class="md-nav__item">
   <a href="#i-got-a-vac-error-i-dont-wanna-get-banned" class="md-nav__link">
     <span class="md-ellipsis">
-      I got a VAC error! I dont wanna get banned!
+      I got a VAC error! I don't wanna get banned!
     </span>
   </a>
   
@@ -603,7 +603,7 @@
 
 
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
-<p>Here you can find common troublshooting problems and potential fixes/solutions. If none of these work, or your problem isn't listed here, please join the <strong><a href="https://discord.gg/64sNFhqUaB">discord</a></strong> and open a support ticket.</p>
+<p>Here you can find common troubleshooting problems and potential fixes/solutions. If none of these work, or your problem isn't listed here, please join the <strong><a href="https://discord.gg/64sNFhqUaB">discord</a></strong> and open a support ticket.</p>
 <p><strong>If you encounter any error, please try upgrading to the <a href="https://github.com/cueki/casual-pre-loader/releases">latest version</a> first.</strong></p>
 <h2 id="this-mod-doesnt-workmy-mod-doesnt-work">This mod doesn't work!/My mod doesn't work!<a class="headerlink" href="#this-mod-doesnt-workmy-mod-doesnt-work" title="Permanent link">&para;</a></h2>
 <h3 id="for-users-installing-mods">For users installing mods:<a class="headerlink" href="#for-users-installing-mods" title="Permanent link">&para;</a></h3>
@@ -623,33 +623,20 @@
 </ul>
 </li>
 <li><strong>If you change huds after installing your mods, make sure to run the preloader again.</strong></li>
-<li><strong>If there was a TF2 update, run the preloader again.</strong><blockquote>
-<p>NOTE: There are a select few mods that <strong>WON'T</strong> work when put in the preloader, they are as follows:</p>
-<ul>
-<li>
-<p>Bsp packed content (think modern community maps).</p>
-</li>
-<li>
-<p>Blacklisted sounds (for now).</p>
-</li>
-<li>
-<p>Decals (for now).</p>
-</li>
-<li>
-<p>Configs (these can stay in custom).</p>
-</li>
-<li>
-<p>No hats mod (this should also stay in custom).</p>
-</li>
-<li>
-<p>Custom named materials and models (ONLY works with casual compatible file paths).</p>
-</li>
-</ul>
-</blockquote>
-</li>
+<li><strong>If there was a TF2 update, run the preloader again.</strong></li>
 </ol>
-<!-- i know it looks strange, but this is how it needs to be formatted for the list to be nested within the blockquote. im sorry -->
-
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are a select few mods that <strong>WON'T</strong> work when put in the preloader, they are as follows:</p>
+<ul>
+<li>Bsp packed content (think modern community maps).</li>
+<li>Blacklisted sounds (for now).</li>
+<li>Decals (for now).</li>
+<li>Configs (these can stay in custom).</li>
+<li>No hats mod (this should also stay in custom).</li>
+<li>Custom named materials and models (ONLY works with casual compatible file paths).</li>
+</ul>
+</div>
 <h3 id="for-users-creating-mods">For users creating mods:<a class="headerlink" href="#for-users-creating-mods" title="Permanent link">&para;</a></h3>
 <p>While this tool doesn't need a mod to be '<em>casual compatible</em>' for it to work, there's still some issues that will need to be addressed. <br></p>
 <ol>
@@ -667,18 +654,18 @@
 <pre><code>{
   &quot;addon_name&quot;: &quot;your mod name here&quot;,
   &quot;type&quot;: &quot;use one of these categories: Experimental, HUD, Misc, Texture, Animation, Sound, Skin, or Model&quot;,
-  &quot;description&quot;: &quot;a brief desctription of what your mod is and what it does&quot;,
+  &quot;description&quot;: &quot;a brief description of what your mod is and what it does&quot;,
   &quot;gamebanana_link&quot;: &quot;the link to your mods gamebanana page&quot;,
 }
 </code></pre>
-<h2 id="i-got-a-vac-error-i-dont-wanna-get-banned">I got a VAC error! I dont wanna get banned!<a class="headerlink" href="#i-got-a-vac-error-i-dont-wanna-get-banned" title="Permanent link">&para;</a></h2>
-<p>The "<code>Disconnected: An issue with your computer is blocking the VAC system. You cannot play on secure servers.</code>" error has nothing to do with the preloader, and is a pretty common Steam bug. <strong>To fix it, simply restart steam.</strong> If that doesnt work, try verifying the integrity of your game files, and running the preloader again.</p>
+<h2 id="i-got-a-vac-error-i-dont-wanna-get-banned">I got a VAC error! I don't wanna get banned!<a class="headerlink" href="#i-got-a-vac-error-i-dont-wanna-get-banned" title="Permanent link">&para;</a></h2>
+<p>The "<code>Disconnected: An issue with your computer is blocking the VAC system. You cannot play on secure servers.</code>" error has nothing to do with the preloader, and is a pretty common Steam bug. <strong>To fix it, simply restart steam.</strong> If that doesn't work, try verifying the integrity of your game files, and running the preloader again.</p>
 <h2 id="common-issuesbugs">Common issues/bugs<a class="headerlink" href="#common-issuesbugs" title="Permanent link">&para;</a></h2>
 <p>This section contains known bugs/issues with the preloader, and fixes for them in case you happen to encounter any.</p>
-<blockquote>
-<p>NOTE:
-If your game is crashing out of the blue, it is most likely an issue with the mods you have installed, and not the preloader. Please troubleshoot your mods FIRST before seeking further assistance in the discord.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If your game is crashing out of the blue, it is most likely an issue with the mods you have installed, and not the preloader. Please troubleshoot your mods FIRST before seeking further assistance in the discord.</p>
+</div>
 <h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Sometimes a bug with quickprecache can crash your TF2 instance on launch. Just launch again to fix it.</li>
